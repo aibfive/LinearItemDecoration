@@ -21,7 +21,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private Context context;
     private List<String> data;
 
-    private RecyclerViewAdapter(Context context, List<String> data){
+    public RecyclerViewAdapter(Context context, List<String> data){
         this.context = context;
         this.data = data;
     }
@@ -30,7 +30,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_recycler_view, null));
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_recycler_view, parent, false));
     }
 
     @Override
