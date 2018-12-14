@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(new FragmentAdapter<Fragment>(getSupportFragmentManager(), initFragment()));
         tabLayout.setupWithViewPager(viewPager);
         int length = tabTexts.length;
+
         for(int i = 0; i < length; i++){
             tabLayout.getTabAt(i).setText(tabTexts[i]);
         }
