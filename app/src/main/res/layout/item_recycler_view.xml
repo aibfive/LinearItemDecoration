@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/white">
+    android:background="@android:color/transparent">
 
     <TextView
         android:id="@+id/tv_value"
@@ -13,6 +13,6 @@
         android:textColor="@android:color/holo_red_dark"
         android:paddingLeft="15dp"
         android:gravity="center_vertical"
-        android:background="@android:color/white"/>
+        android:background="@android:color/transparent"/>
 
 </FrameLayout>
