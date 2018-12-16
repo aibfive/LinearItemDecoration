@@ -20,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private TabLayout tabLayout;
 
-    String[] tabTexts = new String[]{"Horizonal Line", "Vertical Line"};
+    String[] tabTexts = new String[]{
+            "Horizonal Line", "Vertical Line", "Left And Right Tag", "StickySection"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         List<Fragment> fragments = new ArrayList<>();
         fragments.add(new HorizonalLineFragment());
         fragments.add(new VerticalLineFragment());
+        fragments.add(new LeftAndRightTagFragment());
+        fragments.add(new StickySectionFragment());
         return fragments;
     }
 

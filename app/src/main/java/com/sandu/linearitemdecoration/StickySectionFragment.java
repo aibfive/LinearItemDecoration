@@ -14,13 +14,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * LinearItemDecoration
- *
- * @author lizewu
- * @date 2018/12/14
- */
-public class HorizonalLineFragment extends Fragment {
+public class StickySectionFragment extends Fragment {
 
     @Nullable
     @Override
@@ -33,14 +27,13 @@ public class HorizonalLineFragment extends Fragment {
         list.add("数据----->2");
         list.add("数据----->3");
         list.add("数据----->4");
-        list.add("数据----->5");
-        list.add("数据----->6");
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
-        recyclerView.addItemDecoration(new LinearItemDecoration(
-                getResources().getDimensionPixelSize(R.dimen.divider_height),
-                Color.BLUE, LinearItemDecoration.HORIZONTAL, LinearItemDecoration.HORIZONTAL_INCLUDE_LEFT_RIGHT));
-        recyclerView.setAdapter(new RecyclerViewAdapter(getActivity(), list, R.layout.item_horizonal));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        recyclerView.addItemDecoration(new LeftAndRightTagDecoration(getResources().getDimensionPixelSize(R.dimen.divider_height), Color.RED, Color.BLACK));
+        recyclerView.addItemDecoration(new LinearItemDecoration(getResources().getDimensionPixelSize(R.dimen.divider_height), Color.BLUE, LinearItemDecoration.VERTICAL));
+        recyclerView.setAdapter(new RecyclerViewAdapter(getActivity(), list, R.layout.item_vertical));
 
         return view;
     }
+
 }
+

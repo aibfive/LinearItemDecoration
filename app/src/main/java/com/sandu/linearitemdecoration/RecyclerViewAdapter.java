@@ -20,17 +20,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private Context context;
     private List<String> data;
+    private int layoutId;
 
-    public RecyclerViewAdapter(Context context, List<String> data){
+    public RecyclerViewAdapter(Context context, List<String> data, int layoutId){
         this.context = context;
         this.data = data;
+        this.layoutId = layoutId;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_recycler_view, parent, false));
+        return new ViewHolder(LayoutInflater.from(context).inflate(layoutId, parent, false));
     }
 
     @Override

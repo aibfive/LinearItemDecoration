@@ -34,8 +34,8 @@ public class VerticalLineFragment extends Fragment {
         list.add("数据----->3");
         list.add("数据----->4");
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-        recyclerView.addItemDecoration(new LinearItemDecoration(getResources().getDimensionPixelSize(R.dimen.divider_height), Color.BLUE, LinearItemDecoration.VERTICAL_INCLUDE_TOP_BOTTOM));
-        recyclerView.setAdapter(new RecyclerViewAdapter(getActivity(), list));
+        recyclerView.addItemDecoration(new LinearItemDecoration(getResources().getDimensionPixelSize(R.dimen.divider_height), Color.BLUE, LinearItemDecoration.VERTICAL));
+        recyclerView.setAdapter(new RecyclerViewAdapter(getActivity(), list, R.layout.item_vertical));
 
         return view;
     }
