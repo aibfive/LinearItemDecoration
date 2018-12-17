@@ -54,7 +54,7 @@ public class LeftAndRightTagDecoration extends RecyclerView.ItemDecoration {
     @Override
     public void onDraw(Canvas c, RecyclerView parent, RecyclerView.State state) {
         super.onDraw(c, parent, state);
-        int count = parent.getChildCount();
+        int count = parent.getChildCount();    //屏幕中所能显示itemView数量。
         int left, top, right, bottom;
         for (int i = 0; i < count; i++){
             View view = parent.getChildAt(i);

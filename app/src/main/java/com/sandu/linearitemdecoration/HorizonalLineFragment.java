@@ -35,6 +35,13 @@ public class HorizonalLineFragment extends Fragment {
         list.add("数据----->4");
         list.add("数据----->5");
         list.add("数据----->6");
+        list.add("数据----->6");
+        list.add("数据----->6");
+        list.add("数据----->6");
+        list.add("数据----->6");
+        list.add("数据----->6");
+        list.add("数据----->6");
+        list.add("数据----->6");
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
         recyclerView.addItemDecoration(new LinearItemDecoration(
                 getResources().getDimensionPixelSize(R.dimen.divider_height),

@@ -60,7 +60,7 @@ public class LinearItemDecoration extends RecyclerView.ItemDecoration {
         if(orientation == HORIZONTAL){
             int top = parent.getPaddingTop();
             int bottom = parent.getHeight() - parent.getPaddingBottom();
-            int count = parent.getChildCount();
+            int count = parent.getChildCount();    //屏幕中所能显示itemView数量。
             for(int i = 0; i < count; i++){
                 View view = parent.getChildAt(i);
                 int left, right;
@@ -99,7 +99,7 @@ public class LinearItemDecoration extends RecyclerView.ItemDecoration {
         }else if(orientation == VERTICAL){
             int left = parent.getPaddingLeft();
             int right = parent.getWidth() - parent.getPaddingRight();
-            int count = parent.getChildCount();
+            int count = parent.getChildCount();    //屏幕中所能显示itemView数量。
             for(int i = 0; i < count; i++){
                 View view = parent.getChildAt(i);
                 int top, bottom;
